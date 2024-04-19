@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRCTC FORM</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: "Arial", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("Images/transportation-system-3351330_1920.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+    .container {
+      height: auto;
+      width: 500px;
+      background-color: rgb(139, 211, 255);
+      padding: 20px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      position: relative;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: darkblue;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      margin: auto;
+    }
+    input,
+    select {
+      background-color: aliceblue;
+      border: 1px solid lightgray;
+    }
+    input:focus {
+      outline: none;
+    }
+    .loc {
+      height: 100px;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+    }
+    .loc img.arrows {
+      height: 30px;
+      width: 30px;
+      padding: 5px;
+      margin: auto;
+      transform: rotate(90deg);
+      background-color: rgb(149, 231, 235);
+      border-radius: 50%;
+    }
+
+    .loc input#from-loc {
+      height: 30px;
+      width: 150px;
+      padding-left: 25px;
+      background-image: url("./Images/svg/navigation-2-outline.svg");
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: left;
+      opacity: 0.7;
+    }
+    .loc input#to-loc {
+      height: 30px;
+      width: 150px;
+      padding-left: 25px;
+      background-image: url("./Images/svg/location_on_FILL0_wght400_GRAD0_opsz24.svg");
+      background-repeat: no-repeat;
+      background-size: 22px;
+      background-position: left;
+      opacity: 0.7;
+    }
+    .date-box {
+      height: 50px;
+      width: 150px;
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+    #dob {
+      align-self: first baseline;
+      height: 30px;
+      background-color: rgba(232, 233, 234, 0.323);
+      width: 150px;
+      border: 1px solid lightgray;
+    }
+    .dob-head {
+      position: absolute;
+      left: 30px;
+      top: -13px;
+      font-size: 12px;
+    }
+
+    select {
+      height: 30px;
+      width: 150px;
+      padding: 0 10px;
+      margin: 10px 0;
+      background-repeat: no-repeat;
+      margin-left: 40px;
+      padding: 0 15px;
+      padding-left: 25px;
+      background-position: center left;
+      opacity: 0.7;
+      background-size: 22px;
+    }
+    #classes {
+      background-image: url("./Images/svg/business_center_FILL0_wght400_GRAD0_opsz24.svg");
+    }
+    #seats {
+      background-image: url("./Images/svg/flight_class_FILL0_wght400_GRAD0_opsz24.svg");
+    }
+    .opt-box {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      font-size: 12px;
+      margin: 10px 0;
+      font-weight: bold;
+      padding: 15px;
+    }
+    .opt-box p {
+      margin: 5px 0;
+    }
+    .opt-box p input[type="checkbox"] {
+      height: 15px;
+      width: 15px;
+    }
+    .btns {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
+    .btns input[type="submit"] {
+      padding: 10px 20px;
+      font-weight: bold;
+      background-color: orange;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btns button {
+      padding: 10px 20px;
+      font-weight: bold;
+      background-color: green;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    @media (max-width: 400px) {
+      select {
+        margin-left: 0;
+      }
+      .opt-box label,
+      input[type="checkbox"] {
+        width: 100%;
+        display: block;
+      }
+      .btns {
+        flex-direction: column;
+      }
+      .btns > * {
+        margin: 5px 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>BOOK TICKET</h1>
+      <form action="">
+        <div class="loc">
+          <input type="text" name="from-loc" id="from-loc" placeholder="From" />
+          <img
+            src="./Images/svg/swap-outline.svg"
+            alt="arrows"
+            class="arrows"
+          />
+          <input type="text" name="to-loc" id="to-loc" placeholder="To " />
+        </div>
+        <div class="date-box">
+          <label for="dob" class="dob-head">DD/MM/YYYY</label>
+          <input type="date" name="dob" id="dob" />
+        </div>
+        <select name="classes" id="classes" title="classes">
+          <option value="1" selected>All Classes</option>
+          <option value="2">Luxury Class</option>
+          <option value="3">Business Class</option>
+          <option value="4">Economic Class</option>
+        </select>
+        <select name="seats" id="seats" title="seats">
+          <option value="1" selected="selected">General</option>
+          <option value="2">Ladies</option>
+          <option value="3">Senior Citizen</option>
+          <option value="4">Divyang</option>
+        </select>
+        <div class="opt-box">
+          <p>
+            <input type="checkbox" name="opt-box" id="pwd" />
+            <label for="pwd">Person With Disability Concession</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" name="opt-box" id="birth" />
+            <label for="birth">Train With Availiable Birth</label>
+          </p>
+          <p>
+            <input type="checkbox" name="opt-box" id="date" />
+            <label for="date">Flexible With Date</label>
+            &nbsp;&nbsp;
+            <input type="checkbox" name="opt-box" id="pass" />
+            <label for="pass">Railway Pass Concession</label>
+          </p>
+        </div>
+        <div class="btns">
+          <input type="submit" value="Search" />
+          <button type="button">Try Booking in Ask Disha 2.0</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
