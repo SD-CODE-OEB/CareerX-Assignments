@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dog Adoption</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        background-color: #f4f4f4;
+        color: #333;
+        margin: 20px;
+        background-image: url("friends-3042751_1920.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        padding: 20px;
+        /* overflow: hidden; */
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 4px #000;
+      }
+      .adoption {
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      .steps {
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+      }
+      .steps h2 {
+        color: #333;
+        text-align: left;
+      }
+      .steps ul {
+        list-style-type: lower-alpha;
+        color: #333;
+        font-size: 1.2em;
+        margin-top: 25px;
+        padding: 0 20px;
+      }
+      .steps ul li {
+        margin: auto;
+        padding: 10px;
+      }
+      form {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      form h2 {
+        color: #333;
+        text-align: center;
+        font-size: 2.5rem;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px;
+        margin-right: 25px;
+        border-radius: 5px;
+        border: 1px solid #333;
+      }
+      input[type="submit"] {
+        background-color: #333;
+        color: #fff;
+        font-size: 1.2em;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #555;
+      }
+      .dogs {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+      }
+      a {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+        padding: 15px;
+        background-color: #000;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+      }
+      a img {
+        width: 200px;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dog Adoption</h1>
+    <div class="adoption">
+      <div class="steps">
+        <h2>Steps To Adopt A Dog</h2>
+        <ul>
+          <li>Visit the dog</li>
+          <li>Fill out the adoption form</li>
+          <li>Pay the adoption fee</li>
+          <li>Take Your New Buddy Home!!</li>
+        </ul>
+      </div>
+      <form action="">
+        <h2>Adoption Form</h2>
+        <input type="text" placeholder="Enter Your Name" />
+        <br />
+        <input type="email" placeholder="Enter Your Email" />
+        <br />
+        <input type="tel" placeholder="Enter Your Phone" />
+        <br />
+        <input type="submit" value="Request Adoption" />
+      </form>
+    </div>
+    <h1>Available Dogs</h1>
+    <div class="dogs">
+      <a href="./A004/dog1.html"
+        ><img
+          src="https://cdn.pixabay.com/photo/2023/09/19/12/34/dog-8262506_1280.jpg"
+          alt=""
+      /></a>
+      <a href="./A004/dog2.html">
+        <img
+          src="https://cdn.pixabay.com/photo/2023/08/18/15/02/dog-8198719_1280.jpg"
+          alt=""
+        />
+      </a>
+      <a href="./A004/dog3.html"
+        ><img
+          src="https://cdn.pixabay.com/photo/2023/04/28/14/35/dog-7956828_1280.jpg"
+          alt=""
+      /></a>
+    </div>
+  </body>
+</html>
