@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Validator</title>
+</head>
+<style>
+    #display {
+        color: red;
+    }
+</style>
+
+<body>
+    <h3 id="display"></h3>
+    <p>Password
+        <input type="password" id="pwd">
+    </p>
+    <p>
+        <input type="submit" value="Submit" id="submit">
+    </p>
+    <script>
+        const display = document.getElementById('display')
+        const pass = document.getElementById('pwd');
+        const btn = document.getElementById('submit');
+        const symbols = '!@#$&^*?'
+        const nums = '0123456789'
+        btn.onclick = () => {
+            let val = 0;
+            const pwd = pass.value;
+            if (pwd) {
+                display.innerText = "";
+                for (let i = 0; i < pwd.length; i++) {
+                    //capital letter
+                    if (pwd[i] === pwd[i].toUpperCase() && !(nums.includes(pwd[i])) && !(symbols.includes(pwd[i]))) {
+                        val++;
+                    } //symbol
+                    else if (symbols.includes(pwd[i])) {
+                        val++;
+                    } //number
+                    else if (nums.includes(pwd[i])) {
+                        val++;
+                    }
+                }
+                if (val >= 0 && pwd.length < 8) {
+                    display.innerText = ('Weak Password');
+                    display.style.color = "red"
+                } else if (val == 0 || val == 1 || val == 2 && pwd.length >= 8 && pwd.length < 16) {
+                    display.innerText = "Weak Password"
+                    display.style.color = "red"
+                } else if (val == 3 && pwd.length >= 8 && pwd.length < 16) {
+                    console.log('Medium Password');
+                    display.style.color = "yellow"
+                } else if (val >= 4 && pwd.length >= 8 && pwd.length < 16) {
+                    display.innerText = ('Strong Password');
+                    display.style.color = "green";
+                }
+            } else {
+                display.innerText = "Enter Password"
+            }
+        }
+    </script>
+</body>
+
+</html>

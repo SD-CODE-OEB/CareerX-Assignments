@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove duplicates</title>
+</head>
+
+<body>
+    <script>
+        let arr = [14, 25, 58, 63, 14, 10]
+        let arr1 = []
+        arr.forEach(el => {
+            if (!(arr1.includes(el))) {
+                arr1.push(el)
+            }
+        })
+        document.write(`Original Arry : [${arr}]<br>`)
+        document.write(`Array After Dups Removed : [${arr1}]<br>`);
+    </script>
+</body>
+
+</html>
