@@ -10,25 +10,27 @@
 <body>
     <script>
         const str = "madam";
-        const strLen = str.length
-        let count = 0;
-        let revStr = str.split("").reverse()
-        revStr = revStr.join("")
-        for (let i = 0; i < str.length; i++) {
-            if (str.charAt(i) === revStr.charAt(i)) {
-                count++;
+        function checkPalindrome(str) {
+            const strLen = str.length
+            let count = 0;
+            let revStr = str.split("").reverse()
+            revStr = revStr.join("")
+            for (let i = 0; i < str.length; i++) {
+                if (str.charAt(i) === revStr.charAt(i)) {
+                    count++;
+                } else {
+                    break
+                }
+            }
+            if (count === strLen) {
+                document.write(`Given String: ${str} <br>`)
+                document.write('String is Palindrome');
             } else {
-                break
+                document.write(`Given String: ${str}`)
+                document.write(`<br> String is not a Palindrome`)
             }
         }
-        if (count === strLen) {
-            document.write(`Given String: ${str} <br>`)
-            document.write('String is Palindrome');
-        } else {
-            document.write(`Given String: ${str}`)
-            document.write(`<br> String is not a Palindrome`)
-        }
-
+        checkPalindrome(str)
     </script>
 </body>
 

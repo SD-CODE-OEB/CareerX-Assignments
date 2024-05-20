@@ -10,14 +10,18 @@
 <body>
     <script>
         let arr = [14, 25, 58, 63, 14, 10]
-        let arr1 = []
-        arr.forEach(el => {
-            if (!(arr1.includes(el))) {
-                arr1.push(el)
-            }
-        })
-        document.write(`Original Arry : [${arr}]<br>`)
-        document.write(`Array After Dups Removed : [${arr1}]<br>`);
+
+        function removeDuplicates(arr) {
+            let arr1 = []
+            arr.forEach(el => {
+                if (!(arr1.includes(el))) {
+                    arr1.push(el)
+                }
+            })
+            document.write(`Original Arry : [${arr}]<br>`)
+            document.write(`Array After Dups Removed : [${arr1}]<br>`);
+        }
+        removeDuplicates(arr)
     </script>
 </body>
 

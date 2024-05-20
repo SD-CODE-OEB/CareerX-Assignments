@@ -10,12 +10,16 @@
 <body>
     <script>
         const arr = [14, 13, 78, 69, 47, 57, 69, 16, 2, 18, 35, 36];
-        let evenArr = []
-        arr.forEach(el => {
-            if (el % 2 == 0) evenArr.push(el)
-        })
-        document.write(`Given Array : [${arr}] <br> <br>`)
-        document.write(`Array Filtered For Even Nums : [${evenArr}]`)
+
+        function filterEven(arr) {
+            let evenArr = []
+            arr.forEach(el => {
+                if (el % 2 == 0) evenArr.push(el)
+            })
+            document.write(`Given Array : [${arr}] <br> <br>`)
+            document.write(`Array Filtered For Even Nums : [${evenArr}]`)
+        }
+        filterEven(arr)
     </script>
 </body>
 

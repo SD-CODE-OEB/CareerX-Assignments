@@ -9,14 +9,18 @@
 
 <body>
     <script>
-        let celTemp = 37;
-        const farenheit = (celTemp * 9 / 5) + 32;
-        document.write(`Celsius Temperature: ${celTemp} C <br>`);
-        document.write(`Celsius To Farenheit Temperature: ${farenheit} F <br>`);
-        let far_temp = 122.6;
-        const celsius = (far_temp - 32) * 5 / 9;
-        document.write(`Farenheit Temperature: ${far_temp} F <br>`);
-        document.write(`Farenheit To Celsius Temperature: ${celsius.toFixed(2)} C <br>`);
+        function toFarenheit(temp) {
+            const farenheit = (temp * 9 / 5) + 32;
+            document.write(`Celsius Temperature: ${temp} C <br>`);
+            document.write(`Celsius To Farenheit Temperature: ${farenheit} F <br>`);
+        }
+        toFarenheit(37)
+        function toCelsius(temp) {
+            const celsius = (temp - 32) * 5 / 9;
+            document.write(`Farenheit Temperature: ${temp} F <br>`);
+            document.write(`Farenheit To Celsius Temperature: ${celsius.toFixed(2)} C <br>`);
+        }
+        toCelsius(122.6)
     </script>
 </body>
 

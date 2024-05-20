@@ -27,32 +27,35 @@
         const symbols = '!@#$&^*?'
         const nums = '0123456789'
         btn.onclick = () => {
-            let val = 0;
             const pwd = pass.value;
-            if (pwd) {
+            validate(pwd);
+        }
+        function validate(pass) {
+            if (pass) {
+                let val = 0;
                 display.innerText = "";
-                for (let i = 0; i < pwd.length; i++) {
+                for (let i = 0; i < pass.length; i++) {
                     //capital letter
-                    if (pwd[i] === pwd[i].toUpperCase() && !(nums.includes(pwd[i])) && !(symbols.includes(pwd[i]))) {
+                    if (pass[i] === pass[i].toUpperCase() && !(nums.includes(pass[i])) && !(symbols.includes(pass[i]))) {
                         val++;
                     } //symbol
-                    else if (symbols.includes(pwd[i])) {
+                    else if (symbols.includes(pass[i])) {
                         val++;
                     } //number
-                    else if (nums.includes(pwd[i])) {
+                    else if (nums.includes(pass[i])) {
                         val++;
                     }
                 }
-                if (val >= 0 && pwd.length < 8) {
+                if (val >= 0 && pass.length < 8) {
                     display.innerText = ('Weak Password');
                     display.style.color = "red"
-                } else if (val == 0 || val == 1 || val == 2 && pwd.length >= 8 && pwd.length < 16) {
+                } else if (val == 0 || val == 1 || val == 2 && pass.length >= 8 && pass.length < 16) {
                     display.innerText = "Weak Password"
                     display.style.color = "red"
-                } else if (val == 3 && pwd.length >= 8 && pwd.length < 16) {
+                } else if (val == 3 && pass.length >= 8 && pass.length < 16) {
                     console.log('Medium Password');
                     display.style.color = "yellow"
-                } else if (val >= 4 && pwd.length >= 8 && pwd.length < 16) {
+                } else if (val >= 4 && pass.length >= 8 && pass.length < 16) {
                     display.innerText = ('Strong Password');
                     display.style.color = "green";
                 }
