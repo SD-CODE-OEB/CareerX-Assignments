@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #f1f1f1;
+  font-family: "Reddit Sans", sans-serif;
+}
+
+header {
+  display: flex;
+  background: fixed black;
+  color: white;
+  width: 100%;
+}
+header .nav {
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+header .nav h1 {
+  margin-left: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+header .nav .logo {
+  margin-left: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .nav ul {
+  display: flex;
+  justify-content: flex-end;
+  /* justify-content: center; */
+  align-items: center;
+  list-style: none;
+  width: 100%;
+}
+header .nav ul li a {
+  margin: 0 45px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-decoration: none;
+  color: whitesmoke;
+  cursor: pointer;
+}
+header .nav ul li a:hover {
+  text-decoration: underline double;
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #f1f1f1;
+  background-image: url("https://images.unsplash.com/photo-1599533706820-b9a1b6725125?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 100;
+}
+
+.container .blur-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.305);
+  z-index: 1;
+}
+
+.container h1 {
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0.186);
+  color: white;
+  border-radius: 5px;
+  font-size: 2.8rem;
+  padding: 5px 15px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  margin: 2px 5px;
+}
+
+.container .img-box {
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: black;
+  z-index: 200;
+}
+
+.container .img-box p {
+  position: relative;
+}
+
+.container .img-box p span {
+  position: absolute;
+  color: white;
+  z-index: 2;
+  bottom: 20px;
+  left: 5px;
+}
+
+.container .img-box img {
+  width: 180px;
+  height: 180px;
+  margin: 10px 0;
+  object-fit: cover;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.8s ease;
+}
+
+.container .img-box img:hover {
+  width: 200px;
+  height: 200px;
+}
+
+.container .img-box .add-box {
+  display: inline-flex;
+  width: 170px;
+  height: 170px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px dotted white;
+  position: relative;
+}
+
+.container .img-box .add-box span {
+  color: white;
+  font-size: 42px;
+  cursor: pointer;
+}
+
+.container .img-box .add-box p {
+  position: absolute;
+  bottom: 5px;
+  left: 8px;
+}
+
+.container .img-box .add-box #upload {
+  position: absolute;
+  bottom: 75px;
+  left: 58px;
+  font-size: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+}

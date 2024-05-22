@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin: 20%;
+}
+
+#title {
+  text-align: center;
+  text-shadow: 3px 2px 3px magenta;
+  font-size: 7vh;
+}
+
+#tribute-data {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 20px magenta;
+  font-family: Georgia;
+  padding: 25px 25px;
+  margin: 11px;
+  font-size: 16px;
+  border-radius: 45px;
+  margin-top: 50px;
+}
+
+.title-head {
+  font-size: 35px;
+  color: magenta;
+  text-align: center;
+  text-shadow: 5px 5px 10px black;
+}
+
+#tribute-link {
+  text-decoration: none;
+  color: royalblue;
+}
+
+.footer {
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 5px 10px;
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px royalblue;
+}
