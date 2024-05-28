@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Exchange</title>
+</head>
+
+<body>
+    <script>
+        let Currency = prompt("Enter the amount in Indian Rupees: ");
+        const ExchangeRate = 0.0120234;
+        let AmountInDollars = Number(Currency) * ExchangeRate;
+        document.write(`Indian Rupees: ${Currency} RS<br>`);
+        document.write(`Amount in dollars: $${AmountInDollars.toFixed(2)} USD`);
+    </script>
+</body>
+
+</html>
