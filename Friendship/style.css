@@ -182,3 +182,87 @@ p {
     transform: scale(1) rotate(0deg);
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 400px;
+    height: 400px;
+  }
+  .card-inner,
+  .card-outer {
+    width: 200px;
+    height: 400px;
+  }
+  .card-inner {
+    transform: translateX(-130px);
+  }
+  .card-outer {
+    transform: translateX(70px);
+  }
+  .card-back p {
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 0;
+  }
+  .card-outer .card-back p {
+    font-size: 18px;
+  }
+  .card-outer .card-back p span {
+    font-size: 24px;
+    margin-left: 60px;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(-180deg) translateX(200px);
+  }
+  .card:hover .card-outer {
+    transform: rotateY(0deg) translateX(200px);
+  }
+}
+@media only screen and (max-width: 550px) {
+  .card {
+    width: 250px;
+    height: 300px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .icon2 {
+    font-size: 1rem;
+  }
+  .card-back p {
+    font-size: 13px;
+    margin-top: 10px;
+    padding: 0;
+  }
+  .card-inner,
+  .card-outer {
+    width: 125px;
+    height: 300px;
+  }
+  .card-front,
+  .card-back {
+    border: 10px double darksalmon;
+  }
+  .card-inner {
+    transform: translateX(-80px);
+  }
+  .card-outer {
+    transform: translateX(45px);
+  }
+  .card-outer .card-back p {
+    font-size: 14px;
+  }
+  .card-outer .card-back p span {
+    font-size: 20px;
+    margin-left: 40px;
+  }
+  .card:hover .card-inner {
+    transform: rotateY(-180deg) translateX(125px);
+  }
+  .card:hover .card-outer {
+    transform: rotateY(0deg) translateX(125px);
+  }
+}
